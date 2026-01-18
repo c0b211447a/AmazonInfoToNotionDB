@@ -1,11 +1,10 @@
 body {
     margin: 0;
     padding: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     color: #37352f;
-    background: #fff;
+    background: #FAF0E6;
     width: 320px;
-    /* Fixed width for consistency */
 }
 
 .container {
@@ -23,31 +22,50 @@ body {
     padding-bottom: 8px;
 }
 
-h2 {
-    font-size: 16px;
-    margin: 0;
+.header-title {
+    font-size: 14px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-button {
+    width: 10%;
+}
+
+.app-icon {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
 }
 
 .icon-btn {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     padding: 4px;
     border-radius: 4px;
     transition: background 0.2s;
+    color: #787774;
 }
 
 .icon-btn:hover {
-    background: #efedea;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .image-preview {
     text-align: center;
-    margin-bottom: 12px;
-    background: #f7f6f3;
-    padding: 8px;
+    margin-bottom: 8px;
+    background: #fff;
+    /* Changed to white for clean look, border handles separation */
+    padding: 4px;
+    border: 1px solid #e1e1e1;
     border-radius: 4px;
     min-height: 100px;
     display: flex;
@@ -65,28 +83,40 @@ img {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 label {
     font-size: 12px;
-    color: #787774;
+    color: #6B6A65;
+    /* Slightly lighter gray */
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.label-icon {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 input {
     padding: 6px 8px;
     border: 1px solid #e1e1e1;
-    border-radius: 4px;
+    /* Thin border */
+    border-radius: 3px;
     font-size: 13px;
     width: 100%;
     box-sizing: border-box;
+    transition: border-color 0.1s, box-shadow 0.1s;
 }
 
 input:focus {
     outline: none;
-    border-color: #2383e2;
-    box-shadow: 0 0 0 2px rgba(35, 131, 226, 0.2);
+    border-color: #FF9900;
+    /* Amazon Orange */
+    box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.2);
 }
 
 button {
@@ -98,11 +128,21 @@ button {
     cursor: pointer;
     width: 100%;
     transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-icon {
+    font-size: 16px;
 }
 
 .primary-btn {
     background: #2383e2;
+    /* Notion Blue - keeping this as primary action color, or should it be Amazon Orange? Request didn't specify button color, just focus. Stick to Blue as standard Notion, or Orange for Amazon context? Let's stick to Notion-like Blue for actions. */
     color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .primary-btn:hover {
@@ -112,12 +152,14 @@ button {
 .primary-btn:disabled {
     background: #a5d2ff;
     cursor: not-allowed;
+    opacity: 0.7;
 }
 
 .secondary-btn {
     background: #f7f6f3;
     color: #37352f;
     margin-top: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .secondary-btn:hover {
@@ -130,24 +172,32 @@ button {
 
 #message,
 #settingsMessage {
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
     font-size: 13px;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .success {
     background: #e3f2fd;
+    /* Light Blue */
     color: #1976d2;
+    border: 1px solid #bbdefb;
 }
 
 .error {
     background: #ffebee;
+    /* Light Red */
     color: #c62828;
+    border: 1px solid #ffcdd2;
 }
 
-/* Settings View specific */
+/* Settings View specific animation */
 #settingsView {
     animation: fadeIn 0.2s ease-in-out;
 }

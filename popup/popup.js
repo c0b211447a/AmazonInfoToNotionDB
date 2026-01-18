@@ -133,7 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function showMessage(msg, type, elementId) {
     const el = document.getElementById(elementId);
-    el.textContent = msg;
+
+    // アイコンの付与
+    let icon = "";
+    if (type === 'success') icon = "✅ ";
+    if (type === 'error') icon = "⚠️ ";
+
+    el.textContent = icon + msg;
     el.className = type; // classを上書き
     el.classList.remove('hidden');
 }
