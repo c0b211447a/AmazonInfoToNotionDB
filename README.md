@@ -1,0 +1,2 @@
+# AmazonInfoToNotionDB
+Amazonにおける本の商品ページ情報を取得して、読書記録を残すNotionDBにひな形を作成する
