@@ -13,39 +13,64 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <h2>Amazon to Notion</h2>
-            <button id="settingsBtn" title="Settings">⚙️</button>
+        <!-- Main View -->
+        <div id="mainView">
+            <div class="header">
+                <h2>Amazon to Notion</h2>
+                <button id="settingsBtn" title="設定" class="icon-btn">⚙️</button>
+            </div>
+
+            <div id="loading" class="hidden">Loading...</div>
+
+            <div id="content" class="hidden">
+                <div class="image-preview">
+                    <img id="previewImg" src="" alt="Product Image">
+                </div>
+
+                <div class="form-group">
+                    <label>タイトル</label>
+                    <input type="text" id="titleInput">
+                </div>
+
+                <div class="form-group">
+                    <label>著者</label>
+                    <input type="text" id="authorInput">
+                </div>
+
+                <div class="form-group">
+                    <label>URL</label>
+                    <input type="text" id="urlInput">
+                </div>
+
+                <button id="saveBtn" class="primary-btn">Notionへ保存</button>
+            </div>
+
+            <div id="message" class="hidden"></div>
+
+            <button id="getBtn" class="secondary-btn">情報の取得</button>
         </div>
 
-        <div id="loading" class="hidden">Loading...</div>
-
-        <div id="content" class="hidden">
-            <div class="image-preview">
-                <img id="previewImg" src="" alt="Product Image">
+        <!-- Settings View (Hidden by default) -->
+        <div id="settingsView" class="hidden">
+            <div class="header">
+                <h2>設定</h2>
+                <button id="backBtn" title="戻る" class="icon-btn">↩️</button>
             </div>
 
             <div class="form-group">
-                <label>Title</label>
-                <input type="text" id="titleInput">
+                <label for="notionToken">Notion Integration Token</label>
+                <input type="password" id="notionToken" placeholder="secret_...">
             </div>
 
             <div class="form-group">
-                <label>Author</label>
-                <input type="text" id="authorInput">
+                <label for="dbId">Database ID</label>
+                <input type="text" id="dbId" placeholder="32 character ID">
             </div>
 
-            <div class="form-group">
-                <label>URL</label>
-                <input type="text" id="urlInput">
-            </div>
-
-            <button id="saveBtn" class="primary-btn">Save to Notion</button>
+            <button id="saveSettingsBtn" class="primary-btn">設定を保存</button>
+            <div id="settingsMessage" class="hidden"></div>
         </div>
 
-        <div id="message" class="hidden"></div>
-
-        <button id="getBtn" class="secondary-btn">Get Info from Page</button>
     </div>
     <script src="popup.js"></script>
 </body>
