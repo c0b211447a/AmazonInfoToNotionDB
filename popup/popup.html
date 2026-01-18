@@ -17,12 +17,17 @@
         <div id="mainView">
             <div class="header">
                 <div class="header-title">
-                    <span class="app-icon">
-                        <img src="/icons/icon48.png"></img>
-                    </span>
-                    Amazon to Notion
+                    <div class="app-title">
+                        <div class="app-title-line">Amazon</div>
+                        <div class="app-title-line">
+                            <span class="app-icon">
+                                <img src="/icons/icon32.png"></img>
+                            </span>To
+                        </div>
+                        <div class="app-title-line">Notion</div>
+                    </div>
                 </div>
-                <button id="settingsBtn" title="設定" class="icon-btn header-button">⚙️</button>
+                <button id="settingsBtn" title="Settings" class="icon-btn header-button">⚙️</button>
             </div>
 
             <div id="loading" class="hidden">Loading...</div>
@@ -31,20 +36,20 @@
 
                 <!-- Image Preview Section -->
                 <div class="form-group">
-                    <label><span class="label-icon">🖼️</span> 画像</label>
+                    <label><span class="label-icon">🖼️</span> Image</label>
                     <div class="image-preview">
                         <img id="previewImg" src="" alt="Product Image">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label><span class="label-icon">📖</span> 商品名</label>
-                    <input type="text" id="titleInput" placeholder="商品タイトル">
+                    <label><span class="label-icon">📖</span> Title</label>
+                    <input type="text" id="titleInput" placeholder="Title">
                 </div>
 
                 <div class="form-group">
-                    <label><span class="label-icon">👤</span> 著者</label>
-                    <input type="text" id="authorInput" placeholder="著者名">
+                    <label><span class="label-icon">👤</span> Author</label>
+                    <input type="text" id="authorInput" placeholder="Author">
                 </div>
 
                 <div class="form-group">
@@ -52,19 +57,19 @@
                     <input type="text" id="urlInput" placeholder="https://...">
                 </div>
 
-                <button id="saveBtn" class="primary-btn"><span class="btn-icon">🚀</span> Notionへ保存</button>
+                <button id="saveBtn" class="primary-btn"><span class="btn-icon">🚀</span> Save to Notion</button>
             </div>
 
             <div id="message" class="hidden"></div>
 
-            <button id="getBtn" class="secondary-btn"><span class="btn-icon">⚡</span> 情報の取得</button>
+            <button id="getBtn" class="secondary-btn"><span class="btn-icon">⚡</span> Get Information</button>
         </div>
 
         <!-- Settings View (Hidden by default) -->
         <div id="settingsView" class="hidden">
             <div class="header">
                 <h2>Settings</h2>
-                <button id="backBtn" title="戻る" class="icon-btn header-button">↩️</button>
+                <button id="backBtn" title="Back" class="icon-btn header-button">↩️</button>
             </div>
 
             <div class="form-group">
@@ -77,7 +82,7 @@
                 <input type="text" id="dbId" placeholder="32 character ID">
             </div>
 
-            <button id="saveSettingsBtn" class="primary-btn"><span class="btn-icon">💾</span> 設定を保存</button>
+            <button id="saveSettingsBtn" class="primary-btn"><span class="btn-icon">💾</span> Save Settings</button>
             <div id="settingsMessage" class="hidden"></div>
         </div>
 
