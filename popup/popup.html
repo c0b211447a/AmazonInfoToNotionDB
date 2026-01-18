@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        body {
+            width: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Amazon to Notion</h2>
+            <button id="settingsBtn" title="Settings">⚙️</button>
+        </div>
+
+        <div id="loading" class="hidden">Loading...</div>
+
+        <div id="content" class="hidden">
+            <div class="image-preview">
+                <img id="previewImg" src="" alt="Product Image">
+            </div>
+
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="titleInput">
+            </div>
+
+            <div class="form-group">
+                <label>Author</label>
+                <input type="text" id="authorInput">
+            </div>
+
+            <div class="form-group">
+                <label>URL</label>
+                <input type="text" id="urlInput">
+            </div>
+
+            <button id="saveBtn" class="primary-btn">Save to Notion</button>
+        </div>
+
+        <div id="message" class="hidden"></div>
+
+        <button id="getBtn" class="secondary-btn">Get Info from Page</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
