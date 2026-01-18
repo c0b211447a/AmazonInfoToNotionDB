@@ -38,6 +38,39 @@ body {
     font-size: 16px;
 }
 
+.app-title {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title-line {
+    color: #f99402;
+    letter-spacing: 0.4em;
+    text-indent: 0.5em;
+    font-family:
+        'JetBrains Mono',
+        /* 入っていれば優先 */
+        'SF Mono',
+        /* Mac用 */
+        'Cascadia Code',
+        /* Windows最新用 */
+        'Fira Code',
+        /* モダン系 */
+        'Roboto Mono',
+        /* Google系 */
+        'Consolas',
+        /* Windows定番 */
+        'Courier New',
+        /* 予備 */
+        monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+}
+
 h2 {
     font-size: 14px;
     font-weight: 600;
